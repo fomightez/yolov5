@@ -80,4 +80,5 @@ RUN adduser --disabled-password \
     --uid ${NB_UID} \
     ${NB_USER}
 WORKDIR ${HOME}
+COPY ./tutorial.ipynb ${HOME}/tutorial.ipynb
 USER ${USER}
