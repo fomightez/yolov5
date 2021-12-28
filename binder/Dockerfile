@@ -67,7 +67,8 @@ ADD https://ultralytics.com/assets/Arial.ttf /root/.config/Ultralytics/
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
-    pip install --no-cache notebook jupyterlab
+    pip install --no-cache notebook jupyterlab  && \
+    pip install yolov5
 
 # create user with a home directory
 ARG NB_USER
@@ -80,4 +81,5 @@ RUN adduser --disabled-password \
     --uid ${NB_UID} \
     ${NB_USER}
 WORKDIR ${HOME}
+COPY . ${HOME}
 USER ${USER}
