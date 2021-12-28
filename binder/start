@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Copy the contents of the repo to the working directory that is presented upon launch via MyBinder
-cp -r /usr/src/app/* ~/
+# Copy the tutorial notebook to the working directory that is presented upon launch via MyBinder
+cp -r /usr/src/app/tutorial.ipynb ~/*
 
 
 # this must be last line according to 
